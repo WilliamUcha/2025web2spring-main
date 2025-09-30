@@ -10,4 +10,5 @@ import com.web2.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	List<Usuario> findUsuarioByNomeLike(String nome);
+	List<Usuario> findByNomeContainingIgnoreCaseOrEmailContainingIgnoreCase(String nome, String email);
 }

@@ -13,7 +13,7 @@ import jakarta.validation.constraints.NotBlank;
 @Table(name="usuario")
 public class Usuario implements Serializable {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@NotBlank

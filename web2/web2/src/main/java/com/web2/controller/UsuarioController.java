@@ -77,7 +77,7 @@ public class UsuarioController {
 			throws IOException {
 		File nomeArquivo = 
 				new File("./src/main/resources/static/img/"+imagem);
-		if(imagem != null || imagem.trim().length()>0) {
+		if(imagem != null && imagem.trim().length()>0) {
 			return Files.readAllBytes(nomeArquivo.toPath());
 		}
 		return null;
@@ -85,9 +85,16 @@ public class UsuarioController {
 	
 	
 	@GetMapping("/listar")
-	public ModelAndView listar() {
-		ModelAndView mv = new ModelAndView("/usuario/listar");
-		List<Usuario> lista = repository.findAll();
+	public ModelAndView listar(@RequestParam(required = false) String busca) {
+		ModelAndView mv = new ModelAndView("usuario/listar");
+		List<Usuario> lista;
+		
+		if (busca != null && !busca.trim().isEmpty()) {
+			lista = repository.findByNomeContainingIgnoreCaseOrEmailContainingIgnoreCase(busca.trim(), busca.trim());
+		} else {
+			lista = repository.findAll();
+		}
+		
 		mv.addObject("usuarios", lista);
 		return mv;
 	}
