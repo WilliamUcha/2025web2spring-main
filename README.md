@@ -22,17 +22,20 @@ O **EduSystem** é uma plataforma completa para gerenciamento de cursos online, 
 
 ### 📹 Vídeo de Funcionamento
 
-<video width="800" controls>
-  <source src="demo.mp4" type="video/mp4">
-  Seu navegador não suporta a tag de vídeo.
-  <br>
-  <a href="demo.mp4">📥 Baixar vídeo de demonstração</a>
-</video>
+[![🎬 Demonstração Completa do EduSystem](https://img.shields.io/badge/▶️%20Assistir%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](SEU_LINK_YOUTUBE_AQUI)
 
-> **Como adicionar o vídeo:**
-> 1. Converta seu vídeo MKV para MP4
-> 2. Salve o arquivo como `demo.mp4` na raiz do projeto (mesma pasta do README.md)  
-> 3. O vídeo será reproduzido automaticamente no README com máxima compatibilidade
+> **📺 Assista à demonstração completa no YouTube!**  
+> O vídeo mostra todas as funcionalidades do sistema em funcionamento.
+
+**🎯 Conteúdo da demonstração (4min 31s):**
+- ✅ Navegação pela página inicial  
+- ✅ Gestão de Categorias (CRUD completo)
+- ✅ Gestão de Professores (incluindo upload de imagem)
+- ✅ Gestão de Cursos (CRUD completo)
+- ✅ Interface pública - navegação por categorias
+- ✅ Visualização de detalhes do curso
+
+> **📝 Substitua `SEU_LINK_YOUTUBE_AQUI` pelo link do seu vídeo após o upload**
 
 **📝 Roteiro sugerido para o vídeo (3-5 minutos):**
 - ✅ Navegação pela página inicial  
