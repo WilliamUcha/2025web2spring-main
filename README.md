@@ -24,96 +24,12 @@ O **EduSystem** é uma plataforma completa para gerenciamento de cursos online, 
 
 [![🎬 Demonstração Completa do EduSystem](https://img.shields.io/badge/▶️%20Assistir%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](SEU_LINK_YOUTUBE_AQUI)
 
-> **📺 Assista à demonstração completa no YouTube!**  
+> ** Assista à demonstração completa no YouTube!**  
 > O vídeo mostra todas as funcionalidades do sistema em funcionamento.
 
-**🎯 Conteúdo da demonstração (4min 31s):**
-- ✅ Navegação pela página inicial  
-- ✅ Gestão de Categorias (CRUD completo)
-- ✅ Gestão de Professores (incluindo upload de imagem)
-- ✅ Gestão de Cursos (CRUD completo)
-- ✅ Interface pública - navegação por categorias
-- ✅ Visualização de detalhes do curso
-
-> **📝 Substitua `SEU_LINK_YOUTUBE_AQUI` pelo link do seu vídeo após o upload**
-
-**📝 Roteiro sugerido para o vídeo (3-5 minutos):**
-- ✅ Navegação pela página inicial  
-- ✅ Gestão de Categorias (listar, inserir, editar)
-- ✅ Gestão de Professores (incluindo upload de imagem)
-- ✅ Gestão de Cursos (CRUD completo)
-- ✅ Interface pública - navegação por categorias
-- ✅ Visualização de detalhes do curso
-
-**✅ Formato MP4 escolhido:**
-- 🌐 **Compatibilidade universal** - funciona em todos os navegadores
-- 📱 **Mobile friendly** - reproduz perfeitamente em dispositivos móveis  
-- 🚀 **GitHub otimizado** - melhor suporte nativo na plataforma
-
-### 📸 Screenshots
-
-<details>
-<summary>Clique para ver as capturas de tela</summary>
-
-#### Página Inicial
-![Página Inicial](./screenshots/home.png)
-
-#### Gestão de Professores  
-![Professores](./screenshots/professores.png)
-
-#### Gestão de Cursos
-![Cursos](./screenshots/cursos.png)
-
-#### Detalhes do Curso
-![Detalhes](./screenshots/detalhes.png)
 
 </details>
 
-## 🚀 Tecnologias Utilizadas
-
-### Backend
-- **Java 21** - Linguagem de programação
-- **Spring Boot 3.5.4** - Framework principal
-- **Spring MVC** - Arquitetura web
-- **Spring Data JPA** - Persistência de dados
-- **Hibernate** - ORM
-- **MySQL** - Banco de dados
-- **Maven** - Gerenciamento de dependências
-
-### Frontend
-- **Thymeleaf** - Template engine
-- **Bootstrap 5.3.0** - Framework CSS
-- **FontAwesome 6.4.0** - Ícones
-- **JavaScript** - Interatividade
-- **HTML5/CSS3** - Estrutura e estilo
-
-### Arquitetura
-- **MVC (Model-View-Controller)** - Padrão arquitetural
-- **DTO (Data Transfer Object)** - Transferência de dados
-- **Repository Pattern** - Acesso a dados
-- **Bean Validation** - Validação de dados
-
-## 📦 Instalação e Execução
-
-### Pré-requisitos
-
-- ☕ Java 21 ou superior
-- 🗄️ MySQL 8.0 ou superior
-- 📦 Maven 3.6+ (ou usar o wrapper incluído)
-
-### Configuração do Banco de Dados
-
-1. Crie um banco de dados MySQL:
-```sql
-CREATE DATABASE spring2 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-2. Configure as credenciais em `src/main/resources/application.properties`:
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/spring2
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-```
 
 ### Executando o Projeto
 
@@ -137,7 +53,7 @@ cd 2025web2spring-main/web2/web2
 http://localhost:8080
 ```
 
-## 🗂️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 web2/
@@ -165,77 +81,41 @@ web2/
 └── README.md                     # Este arquivo
 ```
 
-## 🎯 Funcionalidades Detalhadas
+##  Funcionalidades Detalhadas
 
-### 👨‍🏫 Gestão de Professores
-- ✅ Cadastro com campos: nome, email, telefone, especialização, currículo
-- ✅ Upload de foto do professor
-- ✅ Listagem com busca e paginação
-- ✅ Edição e exclusão com validações
-- ✅ Prevenção de exclusão com cursos vinculados
+###  Gestão de Professores
+-  Cadastro com campos: nome, email, telefone, especialização, currículo
+-  Upload de foto do professor
+-  Listagem com busca e paginação
+-  Edição e exclusão com validações
+-  Prevenção de exclusão com cursos vinculados
 
-### 📚 Gestão de Categorias  
-- ✅ Cadastro com nome e descrição
-- ✅ Listagem organizada
-- ✅ Edição e exclusão
-- ✅ Prevenção de exclusão com cursos vinculados
+###  Gestão de Categorias  
+-  Cadastro com nome e descrição
+-  Listagem organizada
+-  Edição e exclusão
+-  Prevenção de exclusão com cursos vinculados
 
-### 🎯 Gestão de Cursos
-- ✅ Cadastro completo: nome, descrição, carga horária, preço, datas
-- ✅ Vinculação com professor e categoria
-- ✅ Listagem administrativa
-- ✅ Edição e exclusão
-- ✅ Ícones padronizados (sem imagens)
+###  Gestão de Cursos
+-  Cadastro completo: nome, descrição, carga horária, preço, datas
+-  Vinculação com professor e categoria
+-  Listagem administrativa
+-  Edição e exclusão
+-  Ícones padronizados 
 
-### 🌐 Interface Pública
-- ✅ Página inicial com cards de navegação
-- ✅ Listagem de cursos por categoria
-- ✅ Página de detalhes do curso
-- ✅ Informações do professor responsável
-- ✅ Design responsivo e moderno
+###  Interface Pública
+-  Página inicial com cards de navegação
+-  Listagem de cursos por categoria
+-  Página de detalhes do curso
+-  Informações do professor responsável
+-  Design responsivo e moderno
 
-## 🔧 Configurações Importantes
 
-### Upload de Arquivos
-```properties
-# Configuração para upload de imagens
-spring.servlet.multipart.max-file-size=5MB
-spring.servlet.multipart.max-request-size=5MB
-```
 
-### Banco de Dados
-```properties
-# Configurações JPA/Hibernate
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-```
 
-## 🤝 Como Contribuir
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👨‍💻 Autor
+##  Como Contribuir
+## Autor
 
 **William Ucha**
 - GitHub: [@WilliamUcha](https://github.com/WilliamUcha)
-- LinkedIn: [William Ucha](https://linkedin.com/in/williamucha)
-
-## 🙏 Agradecimentos
-
-- Spring Framework Team
-- Bootstrap Team  
-- FontAwesome
-- Comunidade Java/Spring Boot
-
----
-
-⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!

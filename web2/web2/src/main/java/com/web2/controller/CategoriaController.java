@@ -18,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.web2.dto.CategoriaDTO;
 import com.web2.model.Categoria;
 import com.web2.repository.CategoriaRepository;
+import com.web2.repository.CursoRepository;
 
 import jakarta.validation.Valid;
 
@@ -28,9 +29,14 @@ public class CategoriaController {
 	@Autowired
 	CategoriaRepository repository;
 	
+	@Autowired
+	CursoRepository cursoRepository;
+	
 	@GetMapping("/inserir")
-	public String inserir() {
-		return "categoria/inserir";
+	public ModelAndView inserir() {
+		ModelAndView mv = new ModelAndView("categoria/inserir");
+		mv.addObject("categoria", new Categoria());
+		return mv;
 	}
 	
 	@PostMapping("/inserir")
@@ -64,6 +70,15 @@ public class CategoriaController {
 			msg.addFlashAttribute("erro", "Categoria não encontrada!");
 			return "redirect:/categoria/listar";			
 		}
+		
+		long cursosVinculados = cursoRepository.countByCategoria(categoria.get());
+		if(cursosVinculados > 0) {
+			msg.addFlashAttribute("erro", 
+				"Não é possível excluir esta categoria pois ela possui " + cursosVinculados + 
+				" curso(s) vinculado(s). Exclua primeiro os cursos ou mude a categoria deles.");
+			return "redirect:/categoria/listar";
+		}
+		
 		repository.deleteById(id);
 		msg.addFlashAttribute("sucesso", "Categoria excluída!");
 		return "redirect:/categoria/listar";					

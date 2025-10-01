@@ -212,8 +212,9 @@
 								<th><i class="fas fa-book me-2"></i>Curso</th>
 								<th><i class="fas fa-tag me-2"></i>Categoria</th>
 								<th><i class="fas fa-chalkboard-teacher me-2"></i>Professor</th>
+								<th><i class="fas fa-calendar-alt me-2"></i>Período</th>
 								<th><i class="fas fa-money-bill-wave me-2"></i>Preço</th>
-								<th><i class="fas fa-clock me-2"></i>Carga Horária</th>
+								<th><i class="fas fa-clock me-2"></i>C.H.</th>
 								<th class="text-center"><i class="fas fa-cogs me-2"></i>Ações</th>
 							</tr>
 						</thead>
@@ -242,6 +243,21 @@
 									</div>
 									<div th:if="${curso.professor == null}" class="text-muted">
 										<i class="fas fa-minus-circle me-2"></i>Não definido
+									</div>
+								</td>
+								<td>
+									<div th:if="${curso.dataInicio != null and curso.dataFinal != null}">
+										<i class="fas fa-calendar-alt text-success me-1"></i>
+										<small class="d-block">
+											<span th:text="${#temporals.format(curso.dataInicio, 'dd/MM/yyyy')}">01/01/2024</span>
+										</small>
+										<i class="fas fa-calendar-check text-danger me-1"></i>
+										<small class="d-block">
+											<span th:text="${#temporals.format(curso.dataFinal, 'dd/MM/yyyy')}">31/12/2024</span>
+										</small>
+									</div>
+									<div th:if="${curso.dataInicio == null or curso.dataFinal == null}" class="text-muted">
+										<i class="fas fa-calendar-times me-2"></i>Não definido
 									</div>
 								</td>
 								<td>

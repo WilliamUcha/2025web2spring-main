@@ -136,11 +136,6 @@
 							<i class="fas fa-book me-1"></i>Cursos
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/usuario/listar">
-							<i class="fas fa-users me-1"></i>Usuários
-						</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -167,7 +162,7 @@
 						<p class="mb-0">Altere as informações do professor</p>
 					</div>
 
-					<form method="post">
+					<form method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-md-6 form-group">
 								<label for="nome" class="form-label">
@@ -210,6 +205,26 @@
 							</label>
 							<textarea class="form-control" id="curriculo" name="curriculo" rows="5"
 									  th:text="${curriculo}" placeholder="Descreva a experiência e qualificações do professor..."></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="imagemFile" class="form-label">
+								<i class="fas fa-image me-2"></i>Foto do Professor
+							</label>
+							<!-- Mostrar imagem atual se existir -->
+							<div th:if="${imagem}" class="mb-2">
+								<img th:src="${imagem}" class="img-thumbnail" style="max-width: 150px; max-height: 150px;" alt="Foto atual do professor">
+								<p class="small text-muted">Imagem atual</p>
+							</div>
+							<input type="file" 
+							       class="form-control" 
+							       id="imagemFile" 
+							       name="imagemFile" 
+							       accept="image/*"
+							       placeholder="Selecione uma nova imagem (opcional)">
+							<small class="form-text text-muted">
+								Deixe em branco para manter a imagem atual. Formatos aceitos: JPG, PNG, GIF. Tamanho máximo: 5MB
+							</small>
 						</div>
 						
 						<div class="d-flex justify-content-between align-items-center">

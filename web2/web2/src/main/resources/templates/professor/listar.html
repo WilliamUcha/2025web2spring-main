@@ -150,11 +150,6 @@
 							<i class="fas fa-book me-1"></i>Cursos
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/usuario/listar">
-							<i class="fas fa-users me-1"></i>Usuários
-						</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -194,6 +189,7 @@
 						<thead>
 							<tr>
 								<th><i class="fas fa-hashtag me-2"></i>ID</th>
+								<th><i class="fas fa-image me-2"></i>Foto</th>
 								<th><i class="fas fa-user me-2"></i>Professor</th>
 								<th><i class="fas fa-envelope me-2"></i>Email</th>
 								<th><i class="fas fa-phone me-2"></i>Telefone</th>
@@ -205,10 +201,15 @@
 							<tr th:each="professor : ${professores}">
 								<td class="fw-bold text-primary" th:text="${professor.id}">1</td>
 								<td>
+									<div th:if="${professor.imagem}">
+										<img th:src="${professor.imagem}" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" alt="Foto do professor">
+									</div>
+									<div th:unless="${professor.imagem}" class="professor-avatar">
+										<span th:text="${professor.nome != null ? professor.nome.substring(0,1).toUpperCase() : '?'}">P</span>
+									</div>
+								</td>
+								<td>
 									<div class="d-flex align-items-center">
-										<div class="professor-avatar me-3">
-											<span th:text="${professor.nome != null ? professor.nome.substring(0,1).toUpperCase() : '?'}">P</span>
-										</div>
 										<div>
 											<div class="fw-bold" th:text="${professor.nome}">Nome do Professor</div>
 											<small class="text-muted">Professor</small>

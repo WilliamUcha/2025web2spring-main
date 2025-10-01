@@ -2,6 +2,7 @@ package com.web2.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +32,9 @@ public class Curso implements Serializable {
 	
 	private BigDecimal preco;
 	
-	private String imagem;
+	private LocalDate dataInicio;
+	
+	private LocalDate dataFinal;
 	
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
@@ -91,14 +94,6 @@ public class Curso implements Serializable {
 		this.preco = preco;
 	}
 
-	public String getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(String imagem) {
-		this.imagem = imagem;
-	}
-
 	public Categoria getCategoria() {
 		return categoria;
 	}
@@ -113,5 +108,21 @@ public class Curso implements Serializable {
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
+	}
+
+	public LocalDate getDataInicio() {
+		return dataInicio;
+	}
+
+	public void setDataInicio(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public LocalDate getDataFinal() {
+		return dataFinal;
+	}
+
+	public void setDataFinal(LocalDate dataFinal) {
+		this.dataFinal = dataFinal;
 	}
 }

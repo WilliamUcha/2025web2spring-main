@@ -30,6 +30,8 @@ public class Professor implements Serializable {
 	
 	private String curriculo;
 	
+	private String imagem;
+	
 	@OneToMany(mappedBy = "professor")
 	private List<Curso> cursos;
 
@@ -87,5 +89,13 @@ public class Professor implements Serializable {
 
 	public void setCursos(List<Curso> cursos) {
 		this.cursos = cursos;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 }

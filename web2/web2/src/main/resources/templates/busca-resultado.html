@@ -20,7 +20,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container">
 			<a class="navbar-brand" href="/">
-				<i class="fas fa-graduation-cap"></i> Sistema de Cursos
+				<i class="fas fa-graduation-cap"></i> EduSystem
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
@@ -51,7 +51,6 @@
 							<li><a class="dropdown-item" href="/curso/listar">Cursos</a></li>
 							<li><a class="dropdown-item" href="/categoria/listar">Categorias</a></li>
 							<li><a class="dropdown-item" href="/professor/listar">Professores</a></li>
-							<li><a class="dropdown-item" href="/usuario/listar">Usuários</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -89,7 +88,7 @@
 		</div>
 
 		<!-- Resultados -->
-		<div class="row" th:if="${cursos and not #lists.isEmpty(cursos)}">
+		<div class="row" th:if="${cursos != null and not #lists.isEmpty(cursos)}">
 			<div class="col-lg-4 col-md-6 mb-4" th:each="curso : ${cursos}">
 				<div class="card curso-card shadow-sm h-100">
 					<div class="card-img-top bg-primary d-flex align-items-center justify-content-center" 
@@ -155,7 +154,7 @@
 		</div>
 
 		<!-- Explorar por categorias -->
-		<div class="mt-5" th:if="${categorias and not #lists.isEmpty(categorias)}">
+		<div class="mt-5" th:if="${categorias != null and not #lists.isEmpty(categorias)}">
 			<h4 class="mb-3">Explorar por Categoria</h4>
 			<div class="row">
 				<div class="col-auto mb-2" th:each="categoria : ${categorias}">
@@ -174,7 +173,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h5>Sistema de Cursos</h5>
+					<h5>EduSystem</h5>
 					<p>Plataforma completa para gerenciamento de cursos online.</p>
 				</div>
 				<div class="col-md-6">

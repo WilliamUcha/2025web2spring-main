@@ -12,4 +12,6 @@ import com.web2.model.Curso;
 public interface CursoRepository extends JpaRepository<Curso, Integer>{
 	List<Curso> findCursoByNomeLike(String nome);
 	List<Curso> findCursoByCategoria(Categoria categoria);
+	long countByCategoria(Categoria categoria);
+	long countByProfessor(com.web2.model.Professor professor);
 }

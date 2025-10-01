@@ -7,6 +7,7 @@ public record ProfessorDTO(
 		@NotBlank String email,
 		String telefone,
 		String especializacao,
-		String curriculo
+		String curriculo,
+		String imagem
 		) {
 }

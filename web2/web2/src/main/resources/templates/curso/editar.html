@@ -143,11 +143,6 @@
 							<i class="fas fa-book me-1"></i>Cursos
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/usuario/listar">
-							<i class="fas fa-users me-1"></i>Usuários
-						</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -219,7 +214,7 @@
 									<option th:each="categoria : ${categorias}" 
 											th:value="${categoria.id}" 
 											th:text="${categoria.nome}"
-											th:selected="${categoria.id == curso.categoria.id}">Categoria</option>
+											th:selected="${categoria.id == curso.categoriaId}">Categoria</option>
 								</select>
 							</div>
 							
@@ -232,8 +227,26 @@
 									<option th:each="professor : ${professores}" 
 											th:value="${professor.id}" 
 											th:text="${professor.nome}"
-											th:selected="${professor.id == curso.professor.id}">Professor</option>
+											th:selected="${professor.id == curso.professorId}">Professor</option>
 								</select>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<label for="dataInicio" class="form-label">
+									<i class="fas fa-calendar-alt me-2"></i>Data de Início
+								</label>
+								<input type="date" class="form-control" id="dataInicio" name="dataInicio" 
+									   th:value="${curso.dataInicio}">
+							</div>
+							
+							<div class="col-md-6 form-group">
+								<label for="dataFinal" class="form-label">
+									<i class="fas fa-calendar-check me-2"></i>Data Final
+								</label>
+								<input type="date" class="form-control" id="dataFinal" name="dataFinal" 
+									   th:value="${curso.dataFinal}">
 							</div>
 						</div>
 						
@@ -244,24 +257,6 @@
 								</label>
 								<input type="number" class="form-control" id="cargaHoraria" name="cargaHoraria" 
 									   min="1" th:value="${curso.cargaHoraria}" placeholder="Ex: 40">
-							</div>
-							
-							<div class="col-md-6 form-group">
-								<label for="file" class="form-label">
-									<i class="fas fa-image me-2"></i>Imagem do Curso
-								</label>
-								<input type="file" class="form-control" id="file" name="file" 
-									   accept="image/*">
-								<small class="form-text text-muted">
-									Deixe em branco para manter a imagem atual. Formatos aceitos: JPG, PNG, GIF
-								</small>
-								<div th:if="${curso.imagem != null and curso.imagem != ''}" class="mt-2">
-									<div class="current-image">
-										<small class="text-muted d-block mb-2">Imagem atual:</small>
-										<img th:src="@{/curso/imagem/{imagem}(imagem=${curso.imagem})}" 
-											 class="img-thumbnail" style="max-width: 100px; max-height: 60px;">
-									</div>
-								</div>
 							</div>
 						</div>
 						

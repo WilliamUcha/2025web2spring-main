@@ -137,11 +137,6 @@
 							<i class="fas fa-book me-1"></i>Cursos
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/usuario/listar">
-							<i class="fas fa-users me-1"></i>Usuários
-						</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -168,7 +163,7 @@
 						<p class="mb-0">Cadastre um novo professor no sistema</p>
 					</div>
 
-					<form th:action="@{/professor/inserir}" method="post" th:object="${professor}">
+					<form th:action="@{/professor/inserir}" method="post" th:object="${professor}" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -179,7 +174,6 @@
 									       class="form-control" 
 									       id="nome" 
 									       name="nome" 
-									       th:field="*{nome}"
 									       placeholder="Nome completo do professor"
 									       required>
 									<div class="invalid-feedback" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
@@ -195,7 +189,6 @@
 									       class="form-control" 
 									       id="email" 
 									       name="email" 
-									       th:field="*{email}"
 									       placeholder="email@exemplo.com"
 									       required>
 									<div class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
@@ -213,7 +206,6 @@
 									       class="form-control" 
 									       id="telefone" 
 									       name="telefone" 
-									       th:field="*{telefone}"
 									       placeholder="(11) 99999-9999">
 								</div>
 							</div>
@@ -227,7 +219,6 @@
 									       class="form-control" 
 									       id="especializacao" 
 									       name="especializacao" 
-									       th:field="*{especializacao}"
 									       placeholder="Área de especialização">
 								</div>
 							</div>
@@ -240,9 +231,23 @@
 							<textarea class="form-control" 
 							          id="curriculo" 
 							          name="curriculo" 
-							          th:field="*{curriculo}"
 							          rows="6" 
 							          placeholder="Descreva a formação acadêmica, experiência profissional e qualificações do professor..."></textarea>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="imagemFile">
+								<i class="fas fa-image me-2"></i>Foto do Professor
+							</label>
+							<input type="file" 
+							       class="form-control" 
+							       id="imagemFile" 
+							       name="imagemFile" 
+							       accept="image/*"
+							       placeholder="Selecione uma imagem do professor">
+							<small class="form-text text-muted">
+								Formatos aceitos: JPG, PNG, GIF. Tamanho máximo: 5MB
+							</small>
 						</div>
 
 						<div class="d-flex justify-content-between align-items-center">
