@@ -1,4 +1,4 @@
-# 🎓 EduSystem - Sistema de Gerenciamento de Cursos
+#  EduSystem - Sistema de Gerenciamento de Cursos
 
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.4-green)
@@ -6,23 +6,23 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-purple)
 ![Status](https://img.shields.io/badge/Status-Ativo-success)
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto
 
 O **EduSystem** é uma plataforma completa para gerenciamento de cursos online, desenvolvida em Java com Spring Boot. O sistema permite o cadastro e gerenciamento de **Professores**, **Categorias** e **Cursos** de forma moderna e eficiente.
 
-### ✨ Funcionalidades Principais
+###  Funcionalidades Principais
 
-- 👨‍🏫 **Gestão de Professores** - Cadastro completo com upload de imagem
-- 📚 **Gestão de Categorias** - Organização dos cursos por áreas de conhecimento
-- 🎯 **Gestão de Cursos** - Criação e administração de conteúdo educacional
-- 🌐 **Interface Pública** - Navegação por categorias e visualização de cursos
-- 📱 **Design Responsivo** - Interface adaptável para todos os dispositivos
+-  **Gestão de Professores** - Cadastro completo com upload de imagem
+-  **Gestão de Categorias** - Organização dos cursos por áreas de conhecimento
+-  **Gestão de Cursos** - Criação e administração de conteúdo educacional
+-  **Interface Pública** - Navegação por categorias e visualização de cursos
+-  **Design Responsivo** - Interface adaptável para todos os dispositivos
 
-## 🎬 Demonstração
+##  Demonstração
 
-### 📹 Vídeo de Funcionamento
+###  Vídeo de Funcionamento
 
-[![🎬 Demonstração Completa do EduSystem](https://img.shields.io/badge/▶️%20Assistir%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](SEU_LINK_YOUTUBE_AQUI)
+[![🎬 Demonstração Completa do EduSystem](https://img.shields.io/badge/▶️%20Assistir%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/ydEc05PGGP0)
 
 > ** Assista à demonstração completa no YouTube!**  
 > O vídeo mostra todas as funcionalidades do sistema em funcionamento.
